@@ -20,12 +20,12 @@ function foto(){
 
 	
 
-
+		x = document.getElementById("nombre");
 	xmlHttp.onreadystatechange=function(){
 			if(xmlHttp.readyState== 4 && xmlHttp.readyState != null){
 				alert(xmlHttp.responseText);
 			}
 		}
-		xmlHttp.open("GET","http://192.168.1.86/ejemplo/return.php",true);
+		xmlHttp.open("GET","192.168.1.86/ejemplo/return.php?nombre="+x,true);
 		xmlHttp.send(null);
 }
